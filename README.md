@@ -31,9 +31,9 @@ The Academic Performance Tracker was developed to demonstrate how multiple AWS s
 
 The application uses a serverless AWS architecture:
 
-**User/Application → API Gateway → AWS Lambda → DynamoDB**
+**User → API Gateway → AWS Lambda → DynamoDB / Amazon S3 / Amazon SQS**
 
-Additional AWS services such as **Amazon S3** and **Amazon SQS** support storage and asynchronous application workflows.
+![AWS Architecture Diagram](academic-performance-tracker-architecture.png)
 
 ## What I Learned
 
