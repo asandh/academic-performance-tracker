@@ -26,14 +26,30 @@ The Academic Performance Tracker was developed to demonstrate how multiple AWS s
 - S3 integration for application resources
 - SQS integration for asynchronous workflows and automated reminders
 - Python and Boto3 integration with AWS services
-
 ## Architecture
 
 The application uses a serverless AWS architecture:
 
 **User → API Gateway → AWS Lambda → DynamoDB / Amazon S3 / Amazon SQS**
 
-![AWS Architecture Diagram](academic-performance-tracker-architecture.png)
+![AWS Architecture Diagram](01-aws-architecture.png)
+
+## AWS Implementation
+
+### API Gateway
+Four REST API endpoints were created to handle study sessions, grades, reminders, and academic summaries.
+
+![API Gateway Endpoints](02-api-gateway-endpoints.png)
+
+### DynamoDB
+DynamoDB tables were used to store grade records and study session data.
+
+![DynamoDB Tables](03-dynamodb-tables.png)
+
+### AWS Lambda
+AWS Lambda processes incoming API requests and connects the application to DynamoDB and Amazon SQS.
+
+![AWS Lambda Function](04-lambda-function.png)
 
 ## What I Learned
 
